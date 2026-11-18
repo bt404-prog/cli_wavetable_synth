@@ -9,7 +9,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Definiujemy rygorystyczne flagi, ale NIE aplikujemy ich globalnie
 if(MSVC)
-    set(MY_STRICT_WARNINGS /W4 /WX /permissive- /Zc:__cplusplus)
+    # Dodajemy /wd4324, aby zignorować ostrzeżenie o celowym paddingu pamięci cache
+    set(MY_STRICT_WARNINGS /W4 /WX /permissive- /Zc:__cplusplus /wd4324)
 else()
     set(MY_STRICT_WARNINGS -Wall -Wextra -Wpedantic -Werror)
 endif()

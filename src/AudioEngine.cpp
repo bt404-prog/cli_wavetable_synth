@@ -8,15 +8,14 @@ AudioEngine::AudioEngine() {
         throw std::runtime_error(std::string("PortAudio Init Error: ") + Pa_GetErrorText(err));
     }
 
-    // 44100 próbek na sekundę, częstotliwość 440Hz
     float sampleRate = 44100.0f;
-    float frequency = 440.0f;
-    phaseIncrement = (2.0f * std::numbers::pi_v<float> * frequency) / sampleRate;
+    
+    // Startujemy z ciszą (faza = 0)
+    phaseIncrement = 0.0f;
 
-    // Otwieramy domyślny strumień wyjściowy: 0 wejść, 2 wyjścia (Stereo), 32-bit float
     err = Pa_OpenDefaultStream(&stream, 0, 2, paFloat32, sampleRate,
                                paFramesPerBufferUnspecified, 
-                               paCallback, this); // 'this' leci jako userData
+                               paCallback, this);
 
     if (err != paNoError) {
         throw std::runtime_error(std::string("PortAudio Stream Error: ") + Pa_GetErrorText(err));
@@ -40,34 +39,49 @@ void AudioEngine::stop() {
     if (err != paNoError) throw std::runtime_error(Pa_GetErrorText(err));
 }
 
+void AudioEngine::pushEvent(const AudioEvent& event) {
+    eventQueue.push(event);
+}
+
 int AudioEngine::paCallback(const void* inputBuffer, void* outputBuffer,
                             unsigned long framesPerBuffer,
                             const PaStreamCallbackTimeInfo* timeInfo,
                             PaStreamCallbackFlags statusFlags,
                             void* userData) {
-    // Uciszamy ostrzeżenia o nieużywanych parametrach
     (void)inputBuffer;
     (void)timeInfo;
     (void)statusFlags;
 
-    // Rzutujemy wskaźnik C na naszą klasę C++
     auto* engine = static_cast<AudioEngine*>(userData);
     return engine->processAudio(static_cast<float*>(outputBuffer), framesPerBuffer);
 }
 
 int AudioEngine::processAudio(float* outputBuffer, unsigned long framesPerBuffer) {
-    // Ta pętla wykonuje się w wątku Real-Time.
-    for (unsigned long i = 0; i < framesPerBuffer; ++i) {
-        // Generujemy próbkę i ściszamy do 10% (0.1f)
-        float sample = std::sin(phase) * 0.1f; 
-        
-        *outputBuffer++ = sample; // Kanał Lewy
-        *outputBuffer++ = sample; // Kanał Prawy
-        
-        phase += phaseIncrement;
-        if (phase >= 2.0f * std::numbers::pi_v<float>) {
-            phase -= 2.0f * std::numbers::pi_v<float>;
+    // 1. Zdejmujemy zdarzenia z kolejki
+    while (auto eventOpt = eventQueue.pop()) {
+        auto event = eventOpt.value();
+        if (event.type == EventType::NoteOn) {
+            float frequency = 440.0f * std::pow(2.0f, (event.note - 69.0f) / 12.0f);
+            phaseIncrement = (2.0f * std::numbers::pi_v<float> * frequency) / 44100.0f;
+        } else if (event.type == EventType::NoteOff) {
+            phaseIncrement = 0.0f;
+            phase = 0.0f;
         }
+    }
+
+    // 2. Wypełniamy bufor audio
+    for (unsigned long i = 0; i < framesPerBuffer; ++i) {
+        float sample = 0.0f;
+        if (phaseIncrement > 0.0f) {
+            sample = std::sin(phase) * 0.1f;
+            phase += phaseIncrement;
+            if (phase >= 2.0f * std::numbers::pi_v<float>) {
+                phase -= 2.0f * std::numbers::pi_v<float>;
+            }
+        }
+        
+        *outputBuffer++ = sample; // Lewy kanał
+        *outputBuffer++ = sample; // Prawy kanał
     }
     return paContinue;
 }

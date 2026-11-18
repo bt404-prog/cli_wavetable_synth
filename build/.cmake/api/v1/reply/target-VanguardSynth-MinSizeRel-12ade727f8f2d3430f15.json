@@ -31,31 +31,31 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 42,
+				"line" : 43,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 46,
+				"line" : 47,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 53,
+				"line" : 54,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 49,
+				"line" : 50,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 43,
+				"line" : 44,
 				"parent" : 0
 			}
 		]
@@ -107,6 +107,10 @@
 				{
 					"backtrace" : 4,
 					"fragment" : "/Zc:__cplusplus"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/wd4324"
 				},
 				{
 					"backtrace" : 2,
@@ -171,6 +175,13 @@
 	"dependencies" : 
 	[
 		{
+			"backtrace" : 3,
+			"id" : "portaudio::@e5ccc9046848563531b8"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		},
+		{
 			"backtrace" : 2,
 			"id" : "screen::@b65f64d0ea8424dee96a"
 		},
@@ -181,13 +192,6 @@
 		{
 			"backtrace" : 2,
 			"id" : "component::@b65f64d0ea8424dee96a"
-		},
-		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "portaudio::@e5ccc9046848563531b8"
 		}
 	],
 	"id" : "VanguardSynth::@6890427a1f51a3e7e1df",
