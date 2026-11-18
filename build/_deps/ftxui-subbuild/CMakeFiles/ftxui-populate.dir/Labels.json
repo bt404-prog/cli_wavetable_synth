@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "F:/Wavetable/build/_deps/ftxui-subbuild/CMakeFiles/ftxui-populate"
+		},
+		{
+			"file" : "F:/Wavetable/build/_deps/ftxui-subbuild/CMakeFiles/0ad1a1f1e533df8f44da0f6f97daa4d0/ftxui-populate.rule"
+		},
+		{
+			"file" : "F:/Wavetable/build/_deps/ftxui-subbuild/CMakeFiles/b7e045d28a41ff175150b81e0a5f67a6/ftxui-populate-complete.rule"
+		},
+		{
+			"file" : "F:/Wavetable/build/_deps/ftxui-subbuild/CMakeFiles/410a48ecd2a1198cd9fdf9cd73df6233/ftxui-populate-build.rule"
+		},
+		{
+			"file" : "F:/Wavetable/build/_deps/ftxui-subbuild/CMakeFiles/410a48ecd2a1198cd9fdf9cd73df6233/ftxui-populate-configure.rule"
+		},
+		{
+			"file" : "F:/Wavetable/build/_deps/ftxui-subbuild/CMakeFiles/410a48ecd2a1198cd9fdf9cd73df6233/ftxui-populate-download.rule"
+		},
+		{
+			"file" : "F:/Wavetable/build/_deps/ftxui-subbuild/CMakeFiles/410a48ecd2a1198cd9fdf9cd73df6233/ftxui-populate-install.rule"
+		},
+		{
+			"file" : "F:/Wavetable/build/_deps/ftxui-subbuild/CMakeFiles/410a48ecd2a1198cd9fdf9cd73df6233/ftxui-populate-mkdir.rule"
+		},
+		{
+			"file" : "F:/Wavetable/build/_deps/ftxui-subbuild/CMakeFiles/410a48ecd2a1198cd9fdf9cd73df6233/ftxui-populate-patch.rule"
+		},
+		{
+			"file" : "F:/Wavetable/build/_deps/ftxui-subbuild/CMakeFiles/410a48ecd2a1198cd9fdf9cd73df6233/ftxui-populate-test.rule"
+		},
+		{
+			"file" : "F:/Wavetable/build/_deps/ftxui-subbuild/CMakeFiles/410a48ecd2a1198cd9fdf9cd73df6233/ftxui-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"ftxui-populate"
+		],
+		"name" : "ftxui-populate"
+	}
+}

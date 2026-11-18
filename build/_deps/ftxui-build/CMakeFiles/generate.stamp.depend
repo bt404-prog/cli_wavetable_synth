@@ -1,0 +1,22 @@
+# CMake generation dependency list for this directory.
+F:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+F:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CMakePackageConfigHelpers.cmake
+F:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CPack.cmake
+F:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/CPackComponent.cmake
+F:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/GNUInstallDirs.cmake
+F:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Modules/WriteBasicConfigVersionFile.cmake
+F:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.3/Templates/CPackConfig.cmake.in
+F:/Wavetable/build/_deps/ftxui-src/CMakeLists.txt
+F:/Wavetable/build/_deps/ftxui-src/cmake/ftxui-config.cmake.in
+F:/Wavetable/build/_deps/ftxui-src/cmake/ftxui_benchmark.cmake
+F:/Wavetable/build/_deps/ftxui-src/cmake/ftxui_coverage.cmake
+F:/Wavetable/build/_deps/ftxui-src/cmake/ftxui_export.cmake
+F:/Wavetable/build/_deps/ftxui-src/cmake/ftxui_fuzzer.cmake
+F:/Wavetable/build/_deps/ftxui-src/cmake/ftxui_install.cmake
+F:/Wavetable/build/_deps/ftxui-src/cmake/ftxui_message.cmake
+F:/Wavetable/build/_deps/ftxui-src/cmake/ftxui_modules.cmake
+F:/Wavetable/build/_deps/ftxui-src/cmake/ftxui_package.cmake
+F:/Wavetable/build/_deps/ftxui-src/cmake/ftxui_set_options.cmake
+F:/Wavetable/build/_deps/ftxui-src/cmake/ftxui_test.cmake
+F:/Wavetable/build/_deps/ftxui-src/cmake/iwyu.cmake
+F:/Wavetable/build/_deps/ftxui-src/ftxui.pc.in

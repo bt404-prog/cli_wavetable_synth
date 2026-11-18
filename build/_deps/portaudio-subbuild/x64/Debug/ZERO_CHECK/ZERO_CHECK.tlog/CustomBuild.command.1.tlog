@@ -1,0 +1,10 @@
+^F:\WAVETABLE\BUILD\_DEPS\PORTAUDIO-SUBBUILD\CMAKEFILES\7F30C36BDD709160B286C03388CAEBC9\GENERATE.STAMP.RULE
+setlocal
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SF:/Wavetable/build/_deps/portaudio-subbuild -BF:/Wavetable/build/_deps/portaudio-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file F:/Wavetable/build/_deps/portaudio-subbuild/portaudio-populate.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

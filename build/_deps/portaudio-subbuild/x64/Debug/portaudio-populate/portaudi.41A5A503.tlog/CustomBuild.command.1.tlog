@@ -1,0 +1,150 @@
+^F:\WAVETABLE\BUILD\_DEPS\PORTAUDIO-SUBBUILD\CMAKEFILES\CC82A8C80264B81DF34059959F5795D6\PORTAUDIO-POPULATE-MKDIR.RULE
+setlocal
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P F:/Wavetable/build/_deps/portaudio-subbuild/portaudio-populate-prefix/tmp/portaudio-populate-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch F:/Wavetable/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/Debug/portaudio-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^F:\WAVETABLE\BUILD\_DEPS\PORTAUDIO-SUBBUILD\CMAKEFILES\CC82A8C80264B81DF34059959F5795D6\PORTAUDIO-POPULATE-DOWNLOAD.RULE
+setlocal
+cd F:\Wavetable\build\_deps
+if %errorlevel% neq 0 goto :cmEnd
+F:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P F:/Wavetable/build/_deps/portaudio-subbuild/portaudio-populate-prefix/tmp/portaudio-populate-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch F:/Wavetable/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/Debug/portaudio-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^F:\WAVETABLE\BUILD\_DEPS\PORTAUDIO-SUBBUILD\CMAKEFILES\CC82A8C80264B81DF34059959F5795D6\PORTAUDIO-POPULATE-UPDATE.RULE
+setlocal
+cd F:\Wavetable\build\_deps\portaudio-src
+if %errorlevel% neq 0 goto :cmEnd
+F:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P F:/Wavetable/build/_deps/portaudio-subbuild/portaudio-populate-prefix/tmp/portaudio-populate-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^F:\WAVETABLE\BUILD\_DEPS\PORTAUDIO-SUBBUILD\CMAKEFILES\CC82A8C80264B81DF34059959F5795D6\PORTAUDIO-POPULATE-PATCH.RULE
+setlocal
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch F:/Wavetable/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/Debug/portaudio-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^F:\WAVETABLE\BUILD\_DEPS\PORTAUDIO-SUBBUILD\CMAKEFILES\CC82A8C80264B81DF34059959F5795D6\PORTAUDIO-POPULATE-CONFIGURE.RULE
+setlocal
+cd F:\Wavetable\build\_deps\portaudio-build
+if %errorlevel% neq 0 goto :cmEnd
+F:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch F:/Wavetable/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/Debug/portaudio-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^F:\WAVETABLE\BUILD\_DEPS\PORTAUDIO-SUBBUILD\CMAKEFILES\CC82A8C80264B81DF34059959F5795D6\PORTAUDIO-POPULATE-BUILD.RULE
+setlocal
+cd F:\Wavetable\build\_deps\portaudio-build
+if %errorlevel% neq 0 goto :cmEnd
+F:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch F:/Wavetable/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/Debug/portaudio-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^F:\WAVETABLE\BUILD\_DEPS\PORTAUDIO-SUBBUILD\CMAKEFILES\CC82A8C80264B81DF34059959F5795D6\PORTAUDIO-POPULATE-INSTALL.RULE
+setlocal
+cd F:\Wavetable\build\_deps\portaudio-build
+if %errorlevel% neq 0 goto :cmEnd
+F:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch F:/Wavetable/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/Debug/portaudio-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^F:\WAVETABLE\BUILD\_DEPS\PORTAUDIO-SUBBUILD\CMAKEFILES\CC82A8C80264B81DF34059959F5795D6\PORTAUDIO-POPULATE-TEST.RULE
+setlocal
+cd F:\Wavetable\build\_deps\portaudio-build
+if %errorlevel% neq 0 goto :cmEnd
+F:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch F:/Wavetable/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/Debug/portaudio-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^F:\WAVETABLE\BUILD\_DEPS\PORTAUDIO-SUBBUILD\CMAKEFILES\14E4FF3D27BB93249B9A0D1B0E21B9A3\PORTAUDIO-POPULATE-COMPLETE.RULE
+setlocal
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory F:/Wavetable/build/_deps/portaudio-subbuild/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch F:/Wavetable/build/_deps/portaudio-subbuild/CMakeFiles/Debug/portaudio-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch F:/Wavetable/build/_deps/portaudio-subbuild/portaudio-populate-prefix/src/portaudio-populate-stamp/Debug/portaudio-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^F:\WAVETABLE\BUILD\_DEPS\PORTAUDIO-SUBBUILD\CMAKEFILES\7F30C36BDD709160B286C03388CAEBC9\PORTAUDIO-POPULATE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^F:\WAVETABLE\BUILD\_DEPS\PORTAUDIO-SUBBUILD\CMAKELISTS.TXT
+setlocal
+"F:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SF:/Wavetable/build/_deps/portaudio-subbuild -BF:/Wavetable/build/_deps/portaudio-subbuild --check-stamp-file F:/Wavetable/build/_deps/portaudio-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
