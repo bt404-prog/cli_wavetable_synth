@@ -10,7 +10,7 @@ AudioEngine::AudioEngine() {
 
     float sampleRate = 44100.0f;
     
-    // Startujemy z ciszą (faza = 0)
+    // Starting silent (phaze = 0)
     phaseIncrement = 0.0f;
 
     err = Pa_OpenDefaultStream(&stream, 0, 2, paFloat32, sampleRate,
@@ -69,7 +69,7 @@ int AudioEngine::processAudio(float* outputBuffer, unsigned long framesPerBuffer
         }
     }
 
-    // 2. Wypełniamy bufor audio
+    //filling the audio buffer
     for (unsigned long i = 0; i < framesPerBuffer; ++i) {
         float sample = 0.0f;
         if (phaseIncrement > 0.0f) {
@@ -80,8 +80,10 @@ int AudioEngine::processAudio(float* outputBuffer, unsigned long framesPerBuffer
             }
         }
         
-        *outputBuffer++ = sample; // Lewy kanał
-        *outputBuffer++ = sample; // Prawy kanał
+        *outputBuffer++ = sample; // left channel
+        *outputBuffer++ = sample; // right channel
     }
     return paContinue;
 }
+
+

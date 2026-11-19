@@ -12,7 +12,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "_deps/ftxui-build/Debug/ftxui-component.lib"
+			"path" : "_deps/ftxui-build/MinSizeRel/ftxui-dom.lib"
 		}
 	],
 	"backtrace" : 1,
@@ -44,7 +44,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 130,
+				"line" : 74,
 				"parent" : 0
 			},
 			{
@@ -66,13 +66,13 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 178,
+				"line" : 177,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 187,
+				"line" : 186,
 				"parent" : 0
 			},
 			{
@@ -134,7 +134,7 @@
 	[
 		{
 			"backtrace" : 5,
-			"id" : "dom::@b65f64d0ea8424dee96a"
+			"id" : "screen::@b65f64d0ea8424dee96a"
 		}
 	],
 	"compileGroups" : 
@@ -143,7 +143,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd"
+					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /O1 /Ob1 /DNDEBUG -std:c++20 -MD"
 				},
 				{
 					"backtrace" : 7,
@@ -166,7 +166,7 @@
 			[
 				{
 					"backtrace" : 11,
-					"define" : "IS_FTXUI_COMPONENT_IMPL=1"
+					"define" : "IS_FTXUI_DOM_IMPL=1"
 				},
 				{
 					"backtrace" : 12,
@@ -200,8 +200,12 @@
 			},
 			"sourceIndexes" : 
 			[
+				9,
+				10,
+				11,
+				12,
+				13,
 				14,
-				15,
 				16,
 				17,
 				18,
@@ -212,7 +216,6 @@
 				23,
 				24,
 				25,
-				26,
 				27,
 				28,
 				29,
@@ -222,35 +225,44 @@
 				33,
 				34,
 				35,
+				36,
 				37,
+				38,
 				39,
+				40,
 				41,
-				43
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 5,
 			"id" : "screen::@b65f64d0ea8424dee96a"
 		},
 		{
-			"backtrace" : 5,
-			"id" : "dom::@b65f64d0ea8424dee96a"
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "component::@b65f64d0ea8424dee96a",
+	"id" : "dom::@b65f64d0ea8424dee96a",
 	"install" : 
 	{
 		"destinations" : 
 		[
 			{
 				"backtrace" : 4,
-				"path" : "lib/Debug"
+				"path" : "lib/MinSizeRel"
 			}
 		],
 		"prefix" : 
@@ -262,25 +274,25 @@
 	[
 		{
 			"backtrace" : 5,
-			"id" : "dom::@b65f64d0ea8424dee96a"
+			"id" : "screen::@b65f64d0ea8424dee96a"
 		}
 	],
 	"interfaceLinkLibraries" : 
 	[
 		{
 			"backtrace" : 5,
-			"id" : "dom::@b65f64d0ea8424dee96a"
+			"id" : "screen::@b65f64d0ea8424dee96a"
 		}
 	],
 	"linkLibraries" : 
 	[
 		{
 			"backtrace" : 5,
-			"id" : "dom::@b65f64d0ea8424dee96a"
+			"id" : "screen::@b65f64d0ea8424dee96a"
 		}
 	],
-	"name" : "component",
-	"nameOnDisk" : "ftxui-component.lib",
+	"name" : "dom",
+	"nameOnDisk" : "ftxui-dom.lib",
 	"paths" : 
 	{
 		"build" : "_deps/ftxui-build",
@@ -301,23 +313,20 @@
 				6,
 				7,
 				8,
-				9,
-				10,
-				11,
-				12,
-				13,
-				36,
-				38,
-				40,
-				42
+				15,
+				26
 			]
 		},
 		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
+				9,
+				10,
+				11,
+				12,
+				13,
 				14,
-				15,
 				16,
 				17,
 				18,
@@ -328,7 +337,6 @@
 				23,
 				24,
 				25,
-				26,
 				27,
 				28,
 				29,
@@ -338,10 +346,23 @@
 				33,
 				34,
 				35,
+				36,
 				37,
+				38,
 				39,
+				40,
 				41,
-				43
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52
 			]
 		}
 	],
@@ -349,67 +370,42 @@
 	[
 		{
 			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/include/ftxui/ftxui.hpp",
+			"path" : "build/_deps/ftxui-src/include/ftxui/dom/canvas.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/include/ftxui/component/animation.hpp",
+			"path" : "build/_deps/ftxui-src/include/ftxui/dom/direction.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/include/ftxui/component/app.hpp",
+			"path" : "build/_deps/ftxui-src/include/ftxui/dom/elements.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/include/ftxui/component/captured_mouse.hpp",
+			"path" : "build/_deps/ftxui-src/include/ftxui/dom/flexbox_config.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/include/ftxui/component/component.hpp",
+			"path" : "build/_deps/ftxui-src/include/ftxui/dom/node.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/include/ftxui/component/component_base.hpp",
+			"path" : "build/_deps/ftxui-src/include/ftxui/dom/requirement.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/include/ftxui/component/component_options.hpp",
+			"path" : "build/_deps/ftxui-src/include/ftxui/dom/selection.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/include/ftxui/component/event.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/include/ftxui/component/loop.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/include/ftxui/component/mouse.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/include/ftxui/component/receiver.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/include/ftxui/component/screen_interactive.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/include/ftxui/component/task.hpp",
+			"path" : "build/_deps/ftxui-src/include/ftxui/dom/take_any_args.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -420,177 +416,263 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/animation.cpp",
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/automerge.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/button.cpp",
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/selection_style.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/catch_event.cpp",
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/blink.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/checkbox.cpp",
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/bold.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/collapsible.cpp",
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/border.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/component.cpp",
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/box_helper.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/component_options.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/component_util.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/container.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/dropdown.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/event.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/hoverable.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/input.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/maybe.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/menu.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/modal.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/radiobox.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/renderer.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/resizable_split.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/app.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/slider.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/task.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/task_internal.hpp",
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/box_helper.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/task_queue.cpp",
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/canvas.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/task_queue.hpp",
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/clear_under.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/color_decorator.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/composite_decorator.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/dbox.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/dim.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/flex.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/flexbox.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/flexbox_config.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/flexbox_helper.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/flexbox_helper.hpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/task_runner.cpp",
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/focus.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/task_runner.hpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/terminal_input_parser.cpp",
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/frame.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/terminal_input_parser.hpp",
-			"sourceGroupIndex" : 0
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/gauge.cpp",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "build/_deps/ftxui-src/src/ftxui/component/window.cpp",
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/graph.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/gridbox.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/hbox.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/hyperlink.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/inverted.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/italic.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/linear_gradient.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/node.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/node_decorator.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/paragraph.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/reflect.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/scroll_indicator.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/selection.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/separator.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/size.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/spinner.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/strikethrough.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/table.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/text.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/underlined.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/underlined_double.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/util.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "build/_deps/ftxui-src/src/ftxui/dom/vbox.cpp",
 			"sourceGroupIndex" : 1
 		}
 	],

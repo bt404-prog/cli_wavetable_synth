@@ -5,7 +5,7 @@
 		"commands" : [],
 		"files" : 
 		[
-			"CMakeLists.txt"
+			"build/_deps/ftxui-src/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -22,15 +22,6 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "VanguardSynth::@6890427a1f51a3e7e1df"
-		},
-		{
-			"id" : "portaudio::@e5ccc9046848563531b8"
-		},
-		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
-		},
-		{
 			"id" : "screen::@b65f64d0ea8424dee96a"
 		},
 		{
@@ -38,19 +29,16 @@
 		},
 		{
 			"id" : "component::@b65f64d0ea8424dee96a"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+	"id" : "ALL_BUILD::@b65f64d0ea8424dee96a",
 	"isGeneratorProvided" : true,
 	"name" : "ALL_BUILD",
 	"orderDependencies" : 
 	[
-		{
-			"id" : "VanguardSynth::@6890427a1f51a3e7e1df"
-		},
-		{
-			"id" : "portaudio::@e5ccc9046848563531b8"
-		},
 		{
 			"id" : "screen::@b65f64d0ea8424dee96a"
 		},
@@ -63,8 +51,8 @@
 	],
 	"paths" : 
 	{
-		"build" : ".",
-		"source" : "."
+		"build" : "_deps/ftxui-build",
+		"source" : "build/_deps/ftxui-src"
 	},
 	"sources" : [],
 	"type" : "UTILITY"

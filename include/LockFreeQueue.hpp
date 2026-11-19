@@ -6,12 +6,12 @@
 template <typename T, size_t Capacity>
 class LockFreeQueue {
 public:
-    // Wątek UI wysyłający zdarzenie
+    //UI thread sending the event
     bool push(const T& item) {
         auto current_tail = tail.load(std::memory_order_relaxed);
         auto next_tail = (current_tail + 1) % Capacity;
         
-        // Kolejka pełna
+        // Full queue
         if (next_tail == head.load(std::memory_order_acquire)) {
             return false;
         }
@@ -21,11 +21,11 @@ public:
         return true;
     }
 
-    // Wątek Audio odbierający zdarzenie
+    // Audio thread receiving the event
     std::optional<T> pop() {
         auto current_head = head.load(std::memory_order_relaxed);
         
-        // Kolejka pusta
+        // Empty queue
         if (current_head == tail.load(std::memory_order_acquire)) {
             return std::nullopt;
         }
@@ -37,7 +37,7 @@ public:
 
 private:
     std::array<T, Capacity> buffer;
-    // Wyrównanie do linii cache procesora (zapobiega zjawisku False Sharing)
+    // Alignment to the processor cache line (prevents False Sharing)
     alignas(64) std::atomic<size_t> head{0}; 
     alignas(64) std::atomic<size_t> tail{0}; 
 };

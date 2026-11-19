@@ -33,51 +33,51 @@ int main() {
             {"k", 72}  // C5
         };
 
-        std::string lastNote = "Brak (Wcisnij klawisz)";
+        std::string lastNote = "None (Press a button)";
 
-        auto exit_button = Button("Zatrzymaj i Wyjdz", [&] { screen.Exit(); });
+        auto exit_button = Button("Stop and leave", [&] { screen.Exit(); });
 
         auto renderer = Renderer(exit_button, [&] {
             return vbox({
-                text("Vanguard Synth: Test Komunikacji Lock-Free") | bold | color(Color::RedLight),
+                text("Vanguard Synth: Comunication test Lock-Free") | bold | color(Color::RedLight),
                 separator(),
-                text("Klawiatura PC jako pianino (oktawa 4):"),
+                text("PC keyboard as a piano(octave 4):"),
                 text("  W E   T Y U"),
                 text(" A S D F G H J K"),
                 separator(),
-                text("Wcisnij SPACJE, aby wyciszyc dzwiek (NoteOff)."),
+                text("Press SPACE to stop all sounds"),
                 separator(),
-                text("Aktywna nuta: " + lastNote) | color(Color::Cyan),
+                text("Active note: " + lastNote) | color(Color::Cyan),
                 separator(),
                 exit_button->Render()
             }) | border;
         });
 
-        // Nasłuchiwanie na wciśnięcia klawiatury
+        // Listening for keyboard presses
         auto component = CatchEvent(renderer, [&](Event event) {
-            // Reagujemy tylko na znaki z klawiatury
+            
             if (event.is_character()) {
                 std::string key = event.character();
                 
-                if (key == " ") { // Spacja to nasz Killswitch
+                if (key == " ") { // Space is set as killswitch
                     engine.pushEvent({EventType::NoteOff, 0, 0});
                     lastNote = "Wyciszono (Spacja)";
                     return true;
                 }
                 
-                // Jeśli wciśnięto klawisz z naszej mapy
+                // Checking if pressed key is from our map
                 if (keyToMidi.count(key)) {
                     uint8_t note = keyToMidi[key];
-                    // WYSYŁAMY PAKIET DO STREFY CZERWONEJ
+                    
                     engine.pushEvent({EventType::NoteOn, note, 127});
                     lastNote = key + " (MIDI: " + std::to_string(note) + ")";
                     return true; 
                 }
             }
-            return false; // Zdarzenie nie zostało obsłużone, przekaż dalej (np. kliknięcie myszką w przycisk)
+            return false; 
         });
 
-        // Pętla zablokuje główny wątek, a callback audio pracuje w tle
+        //The loop will block the main thread
         screen.Loop(component);
         
         engine.stop();
@@ -89,3 +89,5 @@ int main() {
 
     return 0;
 }
+
+
