@@ -40,7 +40,11 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(portaudio)
 
 # Główny cel aplikacji
-add_executable(VanguardSynth src/main.cpp src/AudioEngine.cpp)
+add_executable(VanguardSynth
+    src/main.cpp
+    src/AudioEngine.cpp
+    src/SynthEngine.cpp
+)
 target_include_directories(VanguardSynth PRIVATE include)
 
 # Linkowanie bibliotek do naszego pliku binarnego
