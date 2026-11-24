@@ -1,9 +1,0 @@
-prefix="C:/Program Files/VanguardSynth"
-libdir="C:/Program Files/VanguardSynth/lib"
-includedir="C:/Program Files/VanguardSynth/include"
-
-Name: ftxui
-Description: 
-Version: 7.1.0
-Cflags: -I${includedir}
-Libs: -L${libdir} -lftxui-component -lftxui-dom -lftxui-screen

@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"F:/Wavetable/build/_deps/portaudio-subbuild/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
